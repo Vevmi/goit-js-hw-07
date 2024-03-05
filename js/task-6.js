@@ -18,6 +18,9 @@ buttonCreateElem.addEventListener('click', (e) => {
   if (userNumber < min || userNumber > max) {
     return
   } 
+
+  boxesElem.innerHTML = " "
+  inputElem.value = ' '
   const result = createMarkup(userNumber)
   boxesElem.insertAdjacentHTML("beforeend", result)
 })
@@ -35,5 +38,4 @@ function createMarkup(len) {
 
 buttondestroyElem.addEventListener('click',() => {
   boxesElem.innerHTML = " "
-  inputElem.value = '1'
 })
